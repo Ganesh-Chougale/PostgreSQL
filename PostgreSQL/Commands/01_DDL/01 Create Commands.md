@@ -1,16 +1,16 @@
 ## 1. CREATE DATABASE: Creates a new database.
 > Syntax: 
-```bash
+```sql
 CREATE DATABASE database_name;
 ```
 > Example: 
-```bash
+```sql
 CREATE DATABASE my_new_database;
 ```
 
 ## 2. CREATE TABLE: Creates a new table.
 > Syntax: 
-```bash
+```sql
 CREATE TABLE table_name (
     column1 data_type,
     column2 data_type,
@@ -20,7 +20,7 @@ CREATE TABLE table_name (
 );
 ```
 > Example: 
-```bash
+```sql
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -32,14 +32,14 @@ CREATE TABLE customers (
 
 ## 3. CREATE VIEW: Creates a new view.
 > Syntax: 
-```bash
+```sql
 CREATE VIEW view_name AS
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ```
 > Example: 
-```bash
+```sql
 CREATE VIEW active_customers AS
 SELECT customer_id, first_name, last_name
 FROM customers
@@ -48,27 +48,27 @@ WHERE is_active = true;
 
 ## 4. CREATE INDEX: Creates a new index on a table.
 > Syntax: 
-```bash
+```sql
 CREATE INDEX index_name ON table_name (column_name);
 ```
 > Example: 
-```bash
+```sql
 CREATE INDEX idx_customers_last_name ON customers (last_name);
 ```
 
 ## 5. CREATE SCHEMA: Creates a new schema.
 > Syntax: 
-```bash
+```sql
 CREATE SCHEMA schema_name;
 ```
 > Example: 
-```bash
+```sql
 CREATE SCHEMA public;
 ```
 
 ## 6. CREATE SEQUENCE: Creates a new sequence.
 > Syntax: 
-```bash
+```sql
 CREATE SEQUENCE sequence_name
     START WITH start_value
     INCREMENT BY increment_value
@@ -77,7 +77,7 @@ CREATE SEQUENCE sequence_name
     CACHE size;
 ```
 > Example: 
-```bash
+```sql
 CREATE SEQUENCE customer_id_seq
     START WITH 1000
     INCREMENT BY 1
@@ -88,7 +88,7 @@ CREATE SEQUENCE customer_id_seq
 
 ## 7. CREATE TYPE: Creates a new data type (custom types).
 > Syntax: 
-```bash
+```sql
 CREATE TYPE type_name AS (
     column1 data_type,
     column2 data_type,
@@ -96,7 +96,7 @@ CREATE TYPE type_name AS (
 );
 ```
 > Example: 
-```bash
+```sql
 CREATE TYPE contact_info AS (
     email VARCHAR(100),
     phone_number VARCHAR(20)
@@ -105,7 +105,7 @@ CREATE TYPE contact_info AS (
 
 ## 8. CREATE FUNCTION: Creates a new function (though often considered part of procedural language).
 > Syntax: 
-```bash
+```sql
 CREATE FUNCTION function_name(argument1 data_type, argument2 data_type, ...)
 RETURNS return_type
 AS
@@ -116,7 +116,7 @@ LANGUAGE plpgsql;
 ```
 > Example: 
 Function
-```bash
+```sql
 CREATE FUNCTION get_full_name(first_name TEXT, last_name TEXT)
 RETURNS TEXT
 AS
@@ -128,13 +128,13 @@ $$
 LANGUAGE plpgsql;
 ```
 Function Call
-```bash
+```sql
 SELECT get_full_name('John', 'Doe');
 ```
 
 ## 9. CREATE TRIGGER: Creates a new trigger.
 > Syntax: 
-```bash
+```sql
 CREATE TRIGGER trigger_name
     BEFORE | AFTER | INSTEAD OF
     event_type
@@ -144,7 +144,7 @@ CREATE TRIGGER trigger_name
     EXECUTE PROCEDURE function_name();
 ```
 > Example: 
-```bash
+```sql
 CREATE TRIGGER update_last_modified
     BEFORE UPDATE
     ON customers
@@ -155,7 +155,7 @@ CREATE TRIGGER update_last_modified
 
 ## 10. CREATE MATERIALIZED VIEW: Creates a materialized view (an extension of views with physical storage).
 > Syntax: 
-```bash
+```sql
 CREATE MATERIALIZED VIEW materialized_view_name
 AS
 SELECT column1, column2, ...
@@ -163,7 +163,7 @@ FROM table_name
 [WITH DATA];
 ```
 > Example: 
-```bash
+```sql
 CREATE MATERIALIZED VIEW active_customers_view
 AS
 SELECT customer_id, first_name, last_name
@@ -173,10 +173,10 @@ WHERE is_active = true;
 
 ## 11. CREATE EXTENSION: Adds an extension to the database (like additional features or functionalities).
 > Syntax: 
-```bash
+```sql
 CREATE EXTENSION extension_name;
 ```
 > Example: 
-```bash
+```sql
 CREATE EXTENSION pgcrypto;
 ```
