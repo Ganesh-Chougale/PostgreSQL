@@ -1,9 +1,9 @@
 ## . 
 > Syntax: 
-```bash
+```sql
 
 ```
 > Example: 
-```bash
+```sql
 
 ```
