@@ -37,7 +37,7 @@ ALTER TABLE table_name
 
 ```
 
-Simpler Examples:
+#                               Simpler Examples:
 > 1. Adding a column:
 ```SQL
 ALTER TABLE table_name ADD COLUMN column_name data_type;
