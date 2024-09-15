@@ -1,12 +1,9 @@
 ## . 
-<details>
-  <summary>Command to </summary>
 > Syntax: 
-  ```bash
+```bash
 
-  ```
+```
 > Example: 
-  ```bash
+```bash
 
-  ```
-</details>
+```
