@@ -3,7 +3,7 @@
 
 
 > Git Push
-```bash
+```sql
 git add .
 git commit -m "message"
 git push origin main
