@@ -26,7 +26,7 @@ Syntax:
 REVOKE privilege_type ON object_type object_name FROM role_name;
 ```
 
-### **Example:
+### Example:
 **Revoking SELECT permission on a table:**
 ```sql
 -- Revoke SELECT permission on the 'employees' table from the user 'user1'
@@ -48,7 +48,7 @@ Syntax:
 ALTER ROLE role_name [WITH option];
 ```
 
-### **Example:
+### Example:
 **Granting a role to another role:**
 ```sql
 -- Grant the role 'admin' to the role 'user_role'
